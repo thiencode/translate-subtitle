@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Translation",
+    "description": "Translation",
+    "version": "1.0.0",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.coursera.org/*"
+            ],
+            "js": [
+                "background.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "*://www.coursera.org/*"
+      ]
+}
