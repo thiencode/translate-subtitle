@@ -5,14 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
     <title>Document</title>
+    <style>
+        #translateBtn::before {
+            background-color: initial;
+            background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+            border-radius: 125px;
+            content: "";
+            height: 50%;
+            left: 4%;
+            opacity: .5;
+            position: absolute;
+            top: 0;
+            transition: all .3s;
+            width: 92%;
+        }
+
+        #translateBtn:hover, #lang:hover {
+            box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
-    <div style="padding: 4px; display: flex; flex-direction: column;">
-        <span style="text-align: center; font-size: medium; font-weight: bold; margin-bottom: 5px;"> Translation
-            </span>
-        <select id="lang">
+    <div class="flex flex-col p-4 w-52 antialiased items-center">
+        <span class="text-center text-2xl font-bold font-serif text-sky-700"> Translation</span>
+        <select id="lang" class="my-5 bg-green-500 rounded-lg py-2 p-5 text-white font-bold w-36 cursor-pointer focus-visible:outline-none">
             <option value="vi">Vietnamese</option>
             <option value="tr">Turkish</option>
             <option value="en">English</option>
@@ -46,37 +66,8 @@
             <option value="th">Thai</option>
         </select>
         <button id="translateBtn"
-            style="margin-top: 2px; background-color: #337357; color: white; outline: none; border-radius: 5px; border: none; padding: 4px; cursor: pointer;">
-            Translate</button>
-
-        <!-- <div style="
-                display: flex;
-                flex-direction: column;
-                flex: 1;
-                margin-top: 10px;
-            ">
-            <span style="font-size: medium; font-weight: bold; text-align: center;">Contact</span>
-            <span style="font-size: small;">
-                <a href="
-                https://github.com/mucahit-sahin
-                " target="_blank"
-                    style="display: flex; flex-direction: row; border: none; border-radius: 5px; padding: 2px;">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                        style="width: 20px; height: 20px; margin-right: 5px;">
-                    <span style="font-size: small;">mucahit-sahin</span>
-                </a>
-            </span>
-            <span style="font-size: small;">
-                <a href="
-                https://www.buymeacoffee.com/mucahitsahin
-                " target="_blank"
-                    style="display: flex; flex-direction: row; border: none; border-radius: 5px; padding: 4px; background-color: #ff6937; text-decoration: none; color: white;">
-                    <span style="font-size: small; text-align: center; width: 100%;">Buy me a coffee</span>
-                </a>
-            </span>
-        </div> -->
-    </div>
-    <script src="/popup.js"></script>
+            class="bg-[#0078d0] text-white cursor-pointer border-radis rounded-[56px] inline-block py-2 px-7 font-serif text-sm font-semibold text-center transition-all touch-manipulation outline-0 w-40 relative">Translate</button>
+        <script src="/popup.js"></script>
 </body>
 
 </html>
