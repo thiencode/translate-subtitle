@@ -1,10 +1,13 @@
 {
     "manifest_version": 3,
-    "name": "Translation",
-    "description": "Translation",
+    "name": "Coursera VietNamese Subtitles Extention",
+    "description": "Coursera VietNamese Subtitles Extention",
     "version": "1.0.0",
     "action": {
         "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "logo.jpg"
     },
     "content_scripts": [
         {
